@@ -70,7 +70,7 @@ let juan = new Usuario('Juan', 'juan.perez');
 let antonio = new Usuario('Antonio', 'atralice');
 
 console.log(juan.introduccion()); // Mi nombre es Juan, mi usuario de Github es juan.perez.
-console.log(riley.introduccion()); // Mi nombre es Antonio, mi usuario de Github es atralice.
+console.log(antonio.introduccion()); // Mi nombre es Antonio, mi usuario de Github es atralice.
 
 ```
 
