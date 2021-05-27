@@ -39,7 +39,7 @@ proporciona la web (Google, YouTube, MDN, Stack Overflow, y muchos más) en bús
 herramientas necesarias para resolver los distintos problemas que nos enfrentamos, por lo que 
 aprender a realizar estas búsquedas en internet es uno de los skill más importantes que puedes 
 adquirir!
-Andá a tu navegador y simplemente escribí "switch Javascript". Éxitos!!
+En tu buscador basta con simplemente escribir "switch Javascript" y listo. Éxitos!
 */
 function colors(color) {
   //La función recibe un color. Devolver el string correspondiente:
