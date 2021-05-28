@@ -30,6 +30,17 @@ function saludo(idioma) {
   // Tu código:
 }
 
+/*
+Para implementar la siguiente función vamos a utilizar una estructura de control de flujo nueva, 
+llamada switch, si no estás familiarizado con esta estructura, es un buen escenario para hacerle 
+una visita al mejor amigo del programador, INTERNET! 
+En la carrera del desarrollador constantemente es necesario recurrir a los recursos que nos 
+proporciona la web (Google, YouTube, MDN, Stack Overflow, y muchos más) en búsqueda de las 
+herramientas necesarias para resolver los distintos problemas que nos enfrentamos, por lo que 
+aprender a realizar estas búsquedas en internet es uno de los skill más importantes que puedes 
+adquirir!
+En tu buscador basta con simplemente escribir "switch Javascript" y listo. Éxitos!
+*/
 function colors(color) {
   //La función recibe un color. Devolver el string correspondiente:
   //En caso que el color recibido sea "blue", devuleve --> "This is blue"
