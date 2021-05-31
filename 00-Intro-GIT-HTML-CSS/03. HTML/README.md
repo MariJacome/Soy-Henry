@@ -258,7 +258,7 @@ Para poder aplicar reglas de estilo a los elementos html, necesitamos una forma 
 
 Hay varios tipos de selectores, los más básicos son los de tipo, donde indicamos a qué clase de elementos se van a aplicar las reglas, el ejemplo de arriba usa un selector de tipo. Está diciendo: *aplicale a todos los elementos de tipo <p\/> la regla de texto color rojo*.
 
-El selector de tipo se puede usar con cualquier tipo de tag: p, div, body, etc. Otra forma de usar selectors es poniendole un *nombre* o *identificador* a cada elemento HTML. Para esto existe unos `atributos` que pueden recibir todos los tags llamados: `id` y `class`.
+El selector de tipo se puede usar con cualquier tipo de tag: p, div, body, etc. Otra forma de usar selectors es poniendole un *nombre* o *identificador* a cada elemento HTML. Para esto existen unos `atributos` que pueden recibir todos los tags llamados: `id` y `class`.
 
 ```html
   <div id="divId"></div>
