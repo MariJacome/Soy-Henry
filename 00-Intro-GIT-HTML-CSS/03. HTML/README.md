@@ -13,7 +13,7 @@
   </tr>
 </table>
 
-# Lección 8: Fundamentos HTML/CSS
+# Fundamentos HTML/CSS
 
 En esta clase veremos:
 
@@ -77,7 +77,7 @@ Es el título de la página, se mostrará en el tab del browser o en la parte su
 
 ### \<body>
 
-En este tag estára encerrado todo lo que querramos que se vea en la pantalla.
+En este tag estará encerrado todo lo que querramos que se vea en la pantalla.
 
 Entonces, hasta ahora, un documento HTML se ve así:
 
@@ -90,7 +90,7 @@ Entonces, hasta ahora, un documento HTML se ve así:
     </body>
   </html>
 ```
-Como ven, para mayor fácilidad en la lectura y la estructuración del documento, el documento HTML se escribe [indentando (o usando sangría)](https://es.wikipedia.org/wiki/Indentaci%C3%B3n).
+Como ven, para mayor facilidad en la lectura y la estructuración del documento, el documento HTML se escribe [indentando (o usando sangría)](https://es.wikipedia.org/wiki/Indentaci%C3%B3n).
 
 (Todos los tags que presentaremos más abajo van siempre adentro de un tag `<body>`)
 
@@ -104,7 +104,7 @@ Es el tag para los párrafos. Mostrará el texto contenido dentro en una nueva l
 
 ### \<span>
 
-El elemento span es un contenedor de texto genérico. No inserta una nueva linea, como lo hace el elemento p. Sirve básicamente para darle estilo al texto.
+El elemento span es un contenedor de texto genérico. No inserta una nueva linea, como lo hace el elemento `<p>`. Sirve básicamente para darle estilo al texto.
 
 ### \<div>
 
@@ -183,7 +183,7 @@ Es importante notar que distintos atributos pueden recibir distintos valores, ge
 
 ## Formas de dar estilo
 
-Antes de empezar a dar estilos, necesitamos una forma de decirle al browser qué vamos a darles reglas de estilo.
+Antes de empezar a dar estilos, necesitamos una forma de decirle al browser que vamos a darles reglas de estilo.
 Hay varias formas de lograr esto (más adelante veremos en detalle como funcionan cada una):
   * usando el atributo style: esta es la forma primitiva más simple, básicamente le damos reglas a cada tag html.
   * usando el tag `<style/>`: Se utiliza este tag en el `<head>` del documento HTML, con esto logramos agrupar todas las reglas que luego queremos que se apliquen a los elementos HTML.
@@ -203,7 +203,7 @@ Cons:
 
 ### \<style/>
 
-El tag *style*, que se escribe en el <head> del documento, nos permite escribir reglas que se aplicaran a uno o varios elementos html. Es importante notar que con esta forma, podremos darle estilo a muchos elementos de una sóla vez, pero sólo a elementos que estén en el mismo documento.
+El tag *style*, que se escribe en el `<head>` del documento, nos permite escribir reglas que se aplicaran a uno o varios elementos html. Es importante notar que con esta forma, podremos darle estilo a muchos elementos de una sóla vez, pero sólo a elementos que estén en el mismo documento.
 
 ```html
   <html>
@@ -220,6 +220,7 @@ El tag *style*, que se escribe en el <head> del documento, nos permite escribir 
 Pros:
   * Lugar central donde podemos escribir las reglas CSS del documento
   * Podemos compartir reglas entre varios elementos iguales
+
 Cons:
   * No podemos compartir las reglas con *otro* documento HTML.
   * Hay que prestar atención a las reglas, y a qué elementos se aplican.
@@ -245,6 +246,7 @@ Pros:
   * Lugar central donde podemos escribir las reglas CSS del documento
   * Podemos compartir reglas entre varios elementos iguales
   * Podemos compartir reglas entre varios documentos HTML
+
 Cons:
   * Hay que prestar atención a las reglas, y a qué elementos se aplican.
 
@@ -254,39 +256,49 @@ Para poder aplicar reglas de estilo a los elementos html, necesitamos una forma 
 
 ![alt text](./img/css-declaration-small.png)
 
-Hay varios tipos de selectores, los más básicos son los de tipo, donde indicamos a qué clase de elemntos se van a aplicar las reglas, el ejemplo de arriba usa un selector de tipo. Está diciendo: *aplicarle a todos los elementos de tipo <p\/> la regla de texto color rojo*.
+Hay varios tipos de selectores, los más básicos son los de tipo, donde indicamos a qué clase de elementos se van a aplicar las reglas, el ejemplo de arriba usa un selector de tipo. Está diciendo: *aplicale a todos los elementos de tipo <p\/> la regla de texto color rojo*.
 
-El selector de tipo se puede usar con cualquier tipo de tag: p, div, body, etc. Otra forma de usar selectors poniendole un *nombre* o *identificador* a cada elemento HTML. Para esto existe un `atributo` que pueden recibir todos los tags llamados: `id` y `class`.
+El selector de tipo se puede usar con cualquier tipo de tag: p, div, body, etc. Otra forma de usar selectors es poniendole un *nombre* o *identificador* a cada elemento HTML. Para esto existe unos `atributos` que pueden recibir todos los tags llamados: `id` y `class`.
 
 ```html
   <div id="divId"></div>
   <div class="divClass"></div>
 ```
 
-**Ids**: son nombre que sólo pueden aparecer una sólo vez en el documento. Es super especifico y sirve para seleccionar UN solo elemento en particular.
+**Ids**: son nombres que sólo pueden aparecer una sola vez en el documento. Es super específico y sirve para seleccionar UN solo elemento en particular.
 
 **Clases**: podemos asignarle el nombre de una clase a un grupo de elementos html.
 
 #### Selectores básicos
 
 * **Selector de tipo**: Selecciona todos los elementos que coinciden con el nombre del elemento especificado.
+
     Sintaxis: eltname
-    Ejemplo: input se aplicará a cualquier elemento `<input>`.
+
+    Ejemplo: `input` se aplicará a cualquier elemento `<input>`.
 * **Selector de clase**:
-    Selecciona todos los elementos que tienen el atributo de class especificado.
+    Selecciona todos los elementos que tienen el atributo de `class` especificado.
+
     Sintaxis: .classname
-    Ejemplo: .index seleccionará cualquier elemento que tenga la clase "index".
-* **Selector de ID**
+
+    Ejemplo: `.index` seleccionará cualquier elemento que tenga la clase "index".
+* **Selector de ID**:
     Selecciona un elemento basándose en el valor de su atributo id. Solo puede haber un elemento con un determinado ID dentro de un documento.
+
     Sintaxis: #idname
-    Ejemplo: #toc se aplicará a cualquier elemento que tenga el ID "toc".
-* **Selector universal**
+
+    Ejemplo: `#toc` se aplicará a cualquier elemento que tenga el ID "toc".
+* **Selector universal**:
     Selecciona todos los elementos. Opcionalmente, puede estar restringido a un espacio de nombre específico o a todos los espacios de nombres.
+
     Sintaxis: * ns|* *|*
-    Ejemplo: * se aplicará a todos los elementos del documento.
-* **Selector de atributo**
+
+    Ejemplo: `*` se aplicará a todos los elementos del documento.
+* **Selector de atributo**:
     Selecciona elementos basándose en el valor de un determinado atributo.
+
     Sintaxis: [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]
+
     Ejemplo: [autoplay] seleccionará todos los elementos que tengan el atributo "autoplay" establecido (a cualquier valor).
 
 ### Anatomía de las reglas de estilo
@@ -333,7 +345,7 @@ En un documento html cada elemento es representado como una *caja rectangular* y
 
 ### height (alto) y width (ancho)
 
-Podemos decirle al navegador exactamente qué tan *ancho* y *alto* queremos que sea nuestro elemento (contenido), esto se usa en divs, imgs y otros elementos basados en la altura (para determinar el tamaño del texto, necesitaremos usar un propiedad de estilo diferente). Los valores de tamaño pueden estar en muchas medidas diferentes, pero el más común es el píxel "px".
+Podemos decirle al navegador exactamente qué tan *ancho* y *alto* queremos que sea nuestro elemento (contenido), esto se usa en divs, imgs y otros elementos basados en la altura (para determinar el tamaño del texto, necesitaremos usar una propiedad de estilo diferente). Los valores de tamaño pueden estar en muchas medidas diferentes, pero el más común es el píxel "px".
 
 ```css
   div {
@@ -366,11 +378,11 @@ Cuando establecemos el *alto* y el *ancho* de un elemento a traves de la regla c
 * El borde se envolverá alrededor del relleno
 * El margen es el área transparente más externa que envuelve toda la caja.
 
-Por ejemplo. Si establecemos la altura del contenido en 20 px y el ancho en 20 px, el relleno en 5 px, el borde en 1 px y el margen en 10 px.
+Por ejemplo. Si establecemos la altura del contenido en 20 px y el ancho en 20 px, el padding en 5 px, el borde en 1 px y el margen en 10 px.
 
-  Altura real = 25px (contenido) + 2 * 5px (relleno, cada lado) + 2 * 1 (borde de cada lado) + 2 * 10 (margen, cada lado) = 57px
+  Altura real = 25px (contenido) + 2 * 5px (padding, cada lado) + 2 * 1px (borde de cada lado) + 2 * 10px (margen, cada lado) = 57px
 
-  Ancho real = 25px (contenido) + 2 * 5px (relleno, cada lado) + 2 * 1 (borde de cada lado) + 2 * 10 (margen, cada lado) = 57px
+  Ancho real = 25px (contenido) + 2 * 5px (padding, cada lado) + 2 * 1px (borde de cada lado) + 2 * 10px (margen, cada lado) = 57px
 
 Saber esto nos ayudará a dimensionar y posicionar nuestros elementos correctamente.
 
