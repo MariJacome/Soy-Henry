@@ -123,7 +123,7 @@ En JS a diferencia de la herencia clásica nos manejamos con prototipos, que van
 
 Cuando generamos un arreglo nuevo podemos acceder a métodos como `map` o `slice` gracias a que los heredamos del Objeto `Array` que esta vinculado en la propiedad `__proto__` y es el siguiente en el `Prototype Chain`.
 
-Nosotros también podemos generar nuestros propios constructores que de los cuales heredar. Creemos un constructor de el cual pueda haber variantes.
+Nosotros también podemos generar nuestros propios constructores de los cuales heredar. Creemos un constructor de el cual pueda haber variantes.
 
 ``` javascript
 > function Persona(nombre,apellido,ciudad) {
