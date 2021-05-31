@@ -46,7 +46,7 @@ if (condicion) {
 }
 ```
 
-En este ejemplo, vemos que el `if` "hace algo", es decir, escribimos el if para que bifurque le ejecución del código según el valor de `condicion`. Como ya sabemos, si `condicion` tiene un valor *verdaderoso* entonces se ejecutará el bloque de código de arriba, y si no, el de abajo.
+En este ejemplo, vemos que el `if` "hace algo", es decir, escribimos el if para que bifurque le ejecución del código según el valor de `condicion`. Como ya sabemos, si `condicion` tiene un valor *verdaderoso* (truthy, verdadero) entonces se ejecutará el bloque de código de arriba, y si no, el de abajo.
 Fijensé que acá es importante discriminar lo que está *adentro* de los bloques de código, ya que ahí adentro podriamos escribir **expresiones** que sí devuelvan algo.
 
 Nos podemos dar cuenta que algo es un statement, porque si lo *pegamos* en la consola del intérprete -por ejemplo, en la consola del Firefox o Chrome- vamos a ver que no produce ningún resultado:
@@ -73,7 +73,7 @@ Nos podemos dar cuenta que algo es un statement, porque si lo *pegamos* en la co
 
 ## Expressions
 
-Cómo dijimos arriba, una *expression* es cualquier pedazo de código **que pueda ser evaluado a un valor**. Justamente por esto, las vamos a usar en lugares donde JavaScript *espera un valor*. Por ejemplo, cómo cuando pasamos una expresión como argumento de una función.
+Como dijimos arriba, una *expression* es cualquier pedazo de código **que pueda ser evaluado a un valor**. Justamente por esto, las vamos a usar en lugares donde JavaScript *espera un valor*. Por ejemplo, cuando pasamos una expresión como argumento de una función.
 
 Según la documentación de MDN, las expresiones se pueden clasificar en las siguientes categorías:
 
@@ -160,7 +160,7 @@ function suma(a, b) {  // declaro la función suma;
 }
 ```
 
-> Habiamos dicho que por regla general lo que podamos pasarle a una función (por ejemplo, `console.log`) por argumento era una expresión... y muchas veces pasamos una declaración de una función por argumento. Esto sucede porque en JS existen tambien las **function expressions**.
+> Habíamos dicho que por regla general lo que podamos pasarle a una función (por ejemplo, `console.log`) por argumento era una expresión... y muchas veces pasamos una declaración de una función por argumento. Esto sucede porque en JS existen tambien las **function expressions**.
 
 #### Function expressions vs function declarations
 
@@ -191,7 +191,7 @@ array.map(function() {
 })();
 ```
 
-Cómo vemos en el ejemplo de arriba, el intérprete *hace algo*: declara la función. Por lo tanto es un statement. En cambio, en el segundo ejemplo, estamos haciendo una asignación, y la asignación espera una *expresión* en la parte de la derecha, asi que le estamos pasando un function expression.
+Como vemos en el ejemplo de arriba, el intérprete *hace algo*: declara la función. Por lo tanto es un statement. En cambio, en el segundo ejemplo, estamos haciendo una asignación, y la asignación espera una *expresión* en la parte de la derecha, asi que le estamos pasando un function expression.
 
 > Nótese que un function expression puede no tener nombre. Estas son las llamadas **funciones anónimas**.
 
@@ -243,7 +243,7 @@ throw new Error('hubo un error, se termina la ejecución');
 
 ### Expression Statements
 
-JS tiene la particularidad qué en donde sea que el intérprete espera un *statement*, nosotros podemos pasarle una *expresión*. Esto da lugar a los llamados *expression statements*.
+JS tiene la particularidad que en donde sea que el intérprete espera un *statement*, nosotros podemos pasarle una *expresión*. Esto da lugar a los llamados *expression statements*.
 
 > **Esto no funciona en sentido inverso, donde se espera una expresión *NO* podemos pasar una statement**.
 
