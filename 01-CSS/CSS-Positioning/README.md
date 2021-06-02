@@ -12,7 +12,8 @@
     </td>
   </tr>
 </table>
-# Lección 9: CSS Intermedio
+
+# Lección 1: CSS Intermedio
 
 En esta lección cubriremos:
 

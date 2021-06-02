@@ -72,7 +72,7 @@ En la nueva pantalla, vas a tener que seleccionar el nombre de tu nuevo repo. Cr
 
 ![alt](../img/create-repository-name.png)
 
-Luego elegí la visibilidad del proyecto como público (para tener repos privados tenes que pagar el premium de github).
+Luego elegí la visibilidad del proyecto como público ó privado, según tu preferencia.
 
 Por último haz clic en **Crear repositorio**.
 
