@@ -12,6 +12,7 @@
     </td>
   </tr>
 </table>
+
 # Lección 4: Javascript III (continuación de bucles `for` y Arrays)
 
 En esta lección cubriremos:
