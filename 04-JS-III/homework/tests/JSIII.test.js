@@ -11,6 +11,7 @@ const {
   agregarNumeros,
   promedioResultadosTest,
   numeroMasGrande,
+  tablaDelSeis,
   multiplicarArgumentos,
   cuentoElementos,
   diaDeLaSemana,
@@ -104,6 +105,12 @@ describe('numeroMasGrande(numbers)', function() {
     expect(numeroMasGrande([10, 10, 16, 12])).toBe(16);
     expect(numeroMasGrande([97, 100, 80, 55, 72, 94])).toBe(100);
     expect(numeroMasGrande([97, 10000, 80, 55, 7.2, -94])).toBe(10000);
+  });
+});
+
+describe ('tablaDelSeis()', function() {
+  it('should return multiplication table of 6', function() {
+    expect(tablaDelSeis()).toEqual([0 , 6, 12, 18, 24, 30, 36, 42, 48, 54, 60]);
   });
 });
 
