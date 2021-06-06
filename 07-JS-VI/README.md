@@ -25,7 +25,7 @@ En esta lección cubriremos:
 
 ## Callbacks
 
-Un concepto muy importante en Javascript es la capacidad de pasar una función como argumento a otra función. Estas funciones se denominan `callbacks`. Estas funciones pueden llamarse en cualquier momento y pasar argumentos dentro de la función. Pronto descubriremos por qué las devoluciones de llamada son tan importantes para Javascript. La convención es usar `cb` como argumento para la variable que se usará de callback.
+Un concepto muy importante en Javascript es la capacidad de pasar una función como argumento a otra función. Estas funciones se denominan `callbacks`, pueden llamarse en cualquier momento y pasar argumentos dentro de la función. Pronto descubriremos por qué las devoluciones de llamada son tan importantes para Javascript. La convención es usar `cb` como argumento para la variable que se usará de callback.
 
 ```javascript
 function decirHolaAlUsuario(usuario) {
@@ -40,8 +40,8 @@ function crearSaludo(usuario, cb) {
     return cb(usuario);
 }
 
-crearSaludo('Dan', decirHolaAlUsuario); // 'Hello Dan!'
-crearSaludo('Dan', decirAdiosAlUsuario); // 'Goodbye Dan!'
+crearSaludo('Dan', decirHolaAlUsuario); // 'Hola Dan!'
+crearSaludo('Dan', decirAdiosAlUsuario); // 'Adiós Dan!'
 ```
 
 ## Más métodos de Arrays
@@ -66,13 +66,13 @@ function mostrarNombres(elemento) {
     console.log(elemento);
 }
 
-// And call that function in the forEach parentheses
+// Y llama a esa función en los paréntesis del forEach
 autos.forEach(mostrarNombres);
 ```
 
 ### `.reduce`
 
-`.reduce` ejecutará un bucle en nuestra matriz con la intención de reducir cada elemento en un elemento que se devuelve. Como es el primer argumento, acepta un callback que toma dos argumentos, primero un 'acumulador' (el resultado del método de reducción hasta ahora), y el segundo es el elemento en el que se encuentra actualmente. El callback debe contener siempre una declaración de devolución ("return"). `.reduce` también toma un segundo argumento opcional, que sería el acumulador de arranque ("starting accumulator"). Si no se suministra el acumulador de arranque, la reducción comenzará en el primer elemento de la matriz. `.reduce` siempre devolverá el acumulador cuando termine de recorrer los elementos.
+`.reduce` ejecutará un bucle en nuestra matriz con la intención de reducir cada elemento en un elemento que se devuelve. Como primer argumento, acepta un callback que toma dos argumentos, primero un 'acumulador' (el resultado del método de reducción hasta ahora), y el segundo es el elemento en el que se encuentra actualmente. El callback debe contener siempre una declaración de devolución ("return"). `.reduce` también toma un segundo argumento opcional, que sería el acumulador de arranque ("starting accumulator"). Si no se suministra el acumulador de arranque, la reducción comenzará en el primer elemento de la matriz. `.reduce` siempre devolverá el acumulador cuando termine de recorrer los elementos.
 
 ```javascript
 const numeros = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
