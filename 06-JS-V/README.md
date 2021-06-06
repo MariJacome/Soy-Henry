@@ -12,6 +12,7 @@
     </td>
   </tr>
 </table>
+
 # Lección 6: Javascript V (Clases y `prototype`)
 
 En esta lección cubriremos:

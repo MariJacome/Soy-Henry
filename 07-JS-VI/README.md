@@ -12,6 +12,7 @@
     </td>
   </tr>
 </table>
+
 # Lección 7: Javascript VI (Callbacks)
 
 En esta lección cubriremos:
